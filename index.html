@@ -64,6 +64,17 @@
         .emoji {
             font-size: 20px; /* 让图标更清晰 */
         }
+        .warning-text {
+            color: black;
+            font-size: 14px;
+            font-weight: bold;
+            margin-top: -5px;
+            text-align: center;
+            max-width: 90%;
+            white-space: nowrap; /* 防止换行 */
+            overflow: hidden;
+            text-overflow: ellipsis; /* 超出部分显示省略号 */
+        }
 
         /* 手机端优化 */
         @media screen and (max-width: 480px) {
@@ -79,6 +90,9 @@
                 font-size: 16px; /* 按钮稍微小一点，适配手机 */
                 padding: 10px 20px;
             }
+            .warning-text {
+                font-size: 12px; /* 手机端适当缩小文字 */
+            }
         }
     </style>
 </head>
@@ -92,8 +106,9 @@
         <p><span class="emoji">💰</span> <strong>购买 <span class="lowercase">satx</span>：</strong> <a href="https://www.okx.com/ul/SlFCqp7" target="_blank">前往 OKX 购买</a></p>
         <p><span class="emoji">💬</span> <strong>加入 QQ 群：</strong> <a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=1r-JDqmUSJeeWRlX_GowlGw9jfLNQCNC&authKey=HFfNmdCCzsx6r%2FiYYME6eMMOSs4DKaSH0liY8gRyVIt9SufwjAYTjf9BYT6ctJer&noverify=0&group_code=486836075" target="_blank">点击加入 QQ 群</a></p>
 
-        <!-- 关于 satx 链接 -->
-        <p><span class="emoji">ℹ️</span> <strong>关于 <span class="lowercase">satx</span>：</strong> <a href="https://bai13567.github.io/satx.github.io/" target="_blank">点击查看</a></p>
+        <!-- 关于比特聪 satx 链接 -->
+        <p><span class="emoji">ℹ️</span> <strong>关于比特聪 <span class="lowercase">satx</span>：</strong> <a href="https://bai13567.github.io/satx.github.io/" target="_blank">点击查看</a></p>
+        <p class="warning-text">认准真正的比特聪BRC20的satx，谨防仿盘</p>
 
         <a class="button" href="https://x.com/bai13567" target="_blank">回到推特</a>
     </div>
