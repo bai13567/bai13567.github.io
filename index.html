@@ -68,14 +68,26 @@
             color: black;
             font-size: 14px;
             font-weight: bold;
-            margin-top: 5px; /* 让它和上方内容保持一点距离 */
-            padding: 5px 10px; /* 适当增加内边距 */
+            margin-top: 5px;
+            padding: 8px 15px;
             text-align: center;
             max-width: 90%;
-            white-space: nowrap; /* 强制不换行 */
+            white-space: nowrap;
             overflow: hidden;
-            text-overflow: ellipsis; /* 超出部分显示省略号 */
-            border-radius: 5px; /* 轻微圆角，增加可读性 */
+            text-overflow: ellipsis;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        /* 仅在电脑端优化（宽度大于 768px 时应用） */
+        @media screen and (min-width: 768px) {
+            .warning-text {
+                font-size: 16px;
+                max-width: 600px;
+                line-height: 1.6;
+                display: block;
+                margin: 10px auto;
+            }
         }
 
         /* 手机端优化 */
@@ -93,7 +105,7 @@
                 padding: 10px 20px;
             }
             .warning-text {
-                font-size: 12px; /* 手机端适当缩小文字 */
+                font-size: 12px;
             }
         }
     </style>
@@ -108,7 +120,6 @@
         <p><span class="emoji">💰</span> <strong>购买 <span class="lowercase">satx</span>：</strong> <a href="https://www.okx.com/ul/SlFCqp7" target="_blank">前往 OKX 购买</a></p>
         <p><span class="emoji">💬</span> <strong>加入 QQ 群：</strong> <a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=1r-JDqmUSJeeWRlX_GowlGw9jfLNQCNC&authKey=HFfNmdCCzsx6r%2FiYYME6eMMOSs4DKaSH0liY8gRyVIt9SufwjAYTjf9BYT6ctJer&noverify=0&group_code=486836075" target="_blank">点击加入 QQ 群</a></p>
 
-        <!-- 关于比特聪 satx 链接 -->
         <p><span class="emoji">ℹ️</span> <strong>关于比特聪 <span class="lowercase">satx</span>：</strong> <a href="https://bai13567.github.io/satx.github.io/" target="_blank">点击查看</a></p>
         <p class="warning-text">认准真正的比特聪 BRC20 的 satx，谨防仿盘</p>
 
