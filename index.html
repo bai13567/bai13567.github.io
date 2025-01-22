@@ -16,8 +16,8 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            max-width: 600px; /* 在电脑上不会太窄 */
-            width: 90%; /* 在手机端适应屏幕 */
+            max-width: 600px;
+            width: 90%;
             margin: auto;
         }
         h1 {
@@ -28,11 +28,11 @@
         p {
             font-size: 18px;
             color: #333;
-            margin: 15px 0; /* 增加间距 */
+            margin: 15px 0;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 8px; /* 图标和文字之间增加间距 */
+            gap: 8px;
         }
         a {
             color: #007bff;
@@ -44,7 +44,7 @@
         }
         .button {
             display: inline-block;
-            margin-top: 20px;
+            margin-top: 10px; /* 之前是 20px，减少 10px，让它往上移动一点 */
             padding: 12px 24px;
             font-size: 18px;
             color: white;
@@ -62,7 +62,7 @@
             text-transform: lowercase;
         }
         .emoji {
-            font-size: 20px; /* 让图标更清晰 */
+            font-size: 20px;
         }
         .warning-text {
             color: black;
@@ -79,7 +79,6 @@
             display: inline-block;
         }
 
-        /* 仅在电脑端优化（宽度大于 768px 时应用） */
         @media screen and (min-width: 768px) {
             .warning-text {
                 font-size: 16px;
@@ -90,18 +89,17 @@
             }
         }
 
-        /* 手机端优化 */
         @media screen and (max-width: 480px) {
             h1 {
-                font-size: 24px; /* 手机端标题稍微小一点 */
+                font-size: 24px;
             }
             p {
-                font-size: 16px; /* 让文字更紧凑 */
-                flex-direction: column; /* 手机端图标和文字上下排列 */
+                font-size: 16px;
+                flex-direction: column;
                 gap: 5px;
             }
             .button {
-                font-size: 16px; /* 按钮稍微小一点，适配手机 */
+                font-size: 16px;
                 padding: 10px 20px;
             }
             .warning-text {
