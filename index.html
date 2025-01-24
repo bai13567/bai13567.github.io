@@ -195,5 +195,24 @@
         <a class="button" href="https://x.com/bai13567" target="_blank">回到推特</a>
     </div>
 
+        <!-- 监听所有 <a> 链接的点击，并发送 GA4 事件 -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("click", function(event) {
+          let target = event.target.closest("a"); // 确保点击的是 <a> 链接
+          if (target) {
+            let linkText = target.innerText.trim() || "未知链接";
+            let linkHref = target.href;
+
+            gtag('event', 'click_link', {
+              'event_category': 'user_click',
+              'event_label': linkText,
+              'link_url': linkHref
+            });
+          }
+        });
+      });
+    </script>
+
 </body>
 </html>
