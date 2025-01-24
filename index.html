@@ -67,7 +67,13 @@
 </script>
     
     <!-- 安全性增强（CSP 防止恶意嵌套 & XSS 攻击） -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https://bai13567.github.io; style-src 'self' 'unsafe-inline';">
+    <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://tagassistant.google.com;
+    script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://tagassistant.google.com;
+    img-src 'self' https://bai13567.github.io https://www.google-analytics.com;
+    connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://tagassistant.google.com;
+    style-src 'self' 'unsafe-inline';
+">
     
     <style>
         body {
