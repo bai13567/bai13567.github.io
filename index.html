@@ -206,25 +206,34 @@ text-decoration:underline;
 </head>
 <body>
 
-       <div class="container">
-        <a href="settings.html" class="setting-text">Setting</a>
-        <h1 data-lang="home-title">比特聪社区欢迎你的到来</h1>
+<div class="container">
+    <a href="settings.html" class="setting-text">Setting</a>
+    <h1 data-lang="home-title">比特聪社区欢迎你的到来</h1>
 
-        <p><span class="emoji">📜</span> <strong>satx <span data-lang="whitepaper">白皮书</span>：</strong> <a href="https://bai13567.github.io/satxWhitePaper.github.io/" target="_blank" data-lang="view-details">点击查看</a></p>
-        <p><span class="emoji">✈️</span> <strong>satx <span data-lang="community">社区</span> <span data-lang="telegram-group">Telegram 群</span>：</strong> <a href="https://t.me/satxtoken" target="_blank" data-lang="join-telegram">加入 Telegram</a></p>
-        <p><span class="emoji">💰</span> <strong><span data-lang="buy-satx">购买 satx</span>：</strong> <a href="https://www.okx.com/ul/SlFCqp7" target="_blank" data-lang="buy-now">前往 OKX 购买</a></p>
-        <p><span class="emoji">💬</span> <strong><span data-lang="join-qq">加入 QQ 群</span>：</strong> <a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=1r-JDqmUSJeeWRlX_GowlGw9jfLNQCNC&authKey=HFfNmdCCzsx6r%2FiYYME6eMMOSs4DKaSH0liY8gRyVIt9SufwjAYTjf9BYT6ctJer&noverify=0&group_code=486836075" target="_blank" data-lang="join-now">点击加入 QQ 群</a></p>
+    <p><span class="emoji">📜</span> <strong>satx <span data-lang="whitepaper">白皮书</span>：</strong> 
+    <a href="https://bai13567.github.io/satxWhitePaper.github.io/" target="_blank" data-lang="view-details">点击查看</a></p>
 
-<p><span class="emoji">ℹ️</span> <strong><span data-lang="about-satx">关于 satx</span>：</strong> 
-<a id="about-link" href="#" target="_blank" data-lang="view-details">点击查看</a>
-</p>
-           
-        <p class="warning-text" data-lang="warning">真正的比特聪是 BRC20 satx，请注意仿盘！</p>
+    <p><span class="emoji">✈️</span> <strong>satx <span data-lang="community">社区</span> 
+    <span data-lang="telegram-group">Telegram 群</span>：</strong> 
+    <a href="https://t.me/satxtoken" target="_blank" data-lang="join-telegram">加入 Telegram</a></p>
 
-        <a class="button" href="https://x.com/bai13567" target="_blank" data-lang="back-twitter">回到推特</a>
-    </div>
+    <p><span class="emoji">💰</span> <strong><span data-lang="buy-satx">购买 satx</span>：</strong> 
+    <a href="https://www.okx.com/ul/SlFCqp7" target="_blank" data-lang="buy-now">前往 OKX 购买</a></p>
 
-      <script>
+    <p><span class="emoji">💬</span> <strong><span data-lang="join-qq">加入 QQ 群</span>：</strong> 
+    <a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=1r-JDqmUSJeeWRlX_GowlGw9jfLNQCNC&authKey=HFfNmdCCzsx6r%2FiYYME6eMMOSs4DKaSH0liY8gRyVIt9SufwjAYTjf9BYT6ctJer&noverify=0&group_code=486836075" 
+    target="_blank" data-lang="join-now">点击加入 QQ 群</a></p>
+
+    <p><span class="emoji">ℹ️</span> <strong><span data-lang="about-satx">关于 satx</span>：</strong> 
+    <a id="about-link" href="#" target="_blank" data-lang="view-details">点击查看</a>
+    </p>
+
+    <p class="warning-text" data-lang="warning">真正的比特聪是 BRC20 satx，请注意仿盘！</p>
+
+    <a class="button" href="https://x.com/bai13567" target="_blank" data-lang="back-twitter">回到推特</a>
+</div>
+    
+     <script>
     function applyLanguage(lang) {
         const translations = {
             "en": {
@@ -274,14 +283,21 @@ text-decoration:underline;
     }
 
     function syncLanguage() {
-        let language = localStorage.getItem("language") || "zh";
+        let language = localStorage.getItem("language");
+
+        // 如果 localStorage 没有存储语言，默认设置为中文
+        if (!language) {
+            language = "zh";
+            localStorage.setItem("language", language);
+        }
+
         applyLanguage(language);
     }
 
     document.addEventListener("DOMContentLoaded", syncLanguage);
     window.addEventListener("storage", syncLanguage);
 </script>
-
+    
         <!-- 监听所有 <a> 链接的点击，并发送 GA4 事件 -->
     <script>
       document.addEventListener("DOMContentLoaded", function() {
