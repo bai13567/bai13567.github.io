@@ -90,12 +90,38 @@
             max-width: 600px;
             width: 90%;
             margin: auto;
+            position:relative;
         }
-        h1 {
+        
+.header-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right:10px 15px;
+}
+        
+ h1 {
             color: #007bff;
             font-size: 28px;
             margin-bottom: 15px;
         }
+        
+.setting-text {
+    font-size: 12px; /* 设置小字体 */
+    color: gray; /* 灰色 */
+    cursor: pointer; /* 让它像个可点击按钮 */
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-weight: normal;
+    text-decoration:none;
+}
+        .seeting-text:hover{
+text-decoration:underline;
+        }
+        
+   
         p {
             font-size: 18px;
             color: #333;
@@ -182,8 +208,11 @@
 <body>
 
     <div class="container">
-        <h1>比特聪社区欢迎你的到来</h1>
-
+        <div class="header-container">
+    <h1>比特聪社区欢迎你的到来</h1>
+    <a href="settings.html" class="setting-text">Setting</a>
+</div>
+        
         <p><span class="emoji">📜</span> <strong><span class="lowercase">satx</span> 白皮书：</strong> <a href="https://bai13567.github.io/satxWhitePaper.github.io/" target="_blank">点击查看</a></p>
         <p><span class="emoji">✈️</span> <strong><span class="lowercase">satx</span> 社区 Telegram 群：</strong> <a href="https://t.me/satxtoken" target="_blank">加入 Telegram</a></p>
         <p><span class="emoji">💰</span> <strong>购买 <span class="lowercase">satx</span>：</strong> <a href="https://www.okx.com/ul/SlFCqp7" target="_blank" rel="noopener noreferrer">前往 OKX 购买</a></p>
