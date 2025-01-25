@@ -213,10 +213,9 @@ text-decoration:underline;
     <p><span class="emoji">📜</span> <strong>satx <span data-lang="whitepaper">白皮书</span>：</strong> 
     <a href="https://bai13567.github.io/satxWhitePaper.github.io/" target="_blank" data-lang="view-details">点击查看</a></p>
 
-    <p><span class="emoji">✈️</span> <strong>satx <span data-lang="community">社区</span> 
-    <span data-lang="telegram-group">Telegram 群</span>：</strong> 
-    <a href="https://t.me/satxtoken" target="_blank" data-lang="join-telegram">加入 Telegram</a></p>
-
+    <p><span class="emoji">✈️</span> <strong data-lang="join-telegram-header">加入 Telegram：</strong> 
+<a href="https://t.me/satxtoken" target="_blank" data-lang="join-telegram">加入 Telegram</a></p>
+    
     <p><span class="emoji">💰</span> <strong><span data-lang="buy-satx">购买 satx</span>：</strong> 
     <a href="https://www.okx.com/ul/SlFCqp7" target="_blank" data-lang="buy-now">前往 OKX 购买</a></p>
 
@@ -233,55 +232,52 @@ text-decoration:underline;
     <a class="button" href="https://x.com/bai13567" target="_blank" data-lang="back-twitter">回到推特</a>
 </div>
     
-     <script>
-    function applyLanguage(lang) {
-        const translations = {
-            "en": {
-                "home-title": "Welcome to the Bitcong Community!",
-                "whitepaper": "Whitepaper",
-                "view-details": "View Details",
-                "community": "Community",
-                "telegram-group": "Join Telegram",
-                "join-telegram": "Join Telegram",
-                "buy-satx": "Buy satx",
-                "buy-now": "Go to OKX to buy",
-                "join-qq": "Join QQ Group",
-                "join-now": "Join now",
-                "about-satx": "About satx",
-                "warning": "The real Bitcong is BRC20 satx, beware of scams!",
-                "back-twitter": "Back to Twitter"
-            },
-            "zh": {
-                "home-title": "比特聪社区欢迎你的到来",
-                "whitepaper": "白皮书",
-                "view-details": "点击查看",
-                "community": "社区",
-                "telegram-group": "加入 Telegram",
-                "join-telegram": "加入 Telegram",
-                "buy-satx": "购买 satx",
-                "buy-now": "前往 OKX 购买",
-                "join-qq": "加入 QQ 群",
-                "join-now": "点击加入 QQ 群",
-                "about-satx": "关于 satx",
-                "warning": "真正的比特聪是 BRC20 satx，请注意仿盘！",
-                "back-twitter": "回到推特"
-            }
-        };
-
-        document.querySelectorAll("[data-lang]").forEach(el => {
-            const key = el.getAttribute("data-lang");
-            if (translations[lang][key]) {
-                el.textContent = translations[lang][key];
-            }
-        });
-
-        // 更新 "关于 satx" 的链接，确保带上 ?lang= 参数
-        const aboutLink = document.getElementById("about-link");
-        if (aboutLink) {
-            aboutLink.href = `https://bai13567.github.io/satx.github.io/index.html?lang=${lang}`;
+   function applyLanguage(lang) {
+    const translations = {
+        "en": {
+            "home-title": "Welcome to the Bitcong Community!",
+            "whitepaper": "Whitepaper",
+            "view-details": "View Details",
+            "join-telegram-header": "Join Telegram:", // ✅ 修改这里
+            "join-telegram": "Join Telegram",
+            "buy-satx": "Buy satx",
+            "buy-now": "Go to OKX to buy",
+            "join-qq": "Join QQ Group",
+            "join-now": "Join now",
+            "about-satx": "About satx",
+            "warning": "The real Bitcong is BRC20 satx, beware of scams!",
+            "back-twitter": "Back to Twitter"
+        },
+        "zh": {
+            "home-title": "比特聪社区欢迎你的到来",
+            "whitepaper": "白皮书",
+            "view-details": "点击查看",
+            "join-telegram-header": "加入 Telegram：", // ✅ 修改这里
+            "join-telegram": "加入 Telegram",
+            "buy-satx": "购买 satx",
+            "buy-now": "前往 OKX 购买",
+            "join-qq": "加入 QQ 群",
+            "join-now": "点击加入 QQ 群",
+            "about-satx": "关于 satx",
+            "warning": "真正的比特聪是 BRC20 satx，请注意仿盘！",
+            "back-twitter": "回到推特"
         }
-    }
+    };
 
+    document.querySelectorAll("[data-lang]").forEach(el => {
+        const key = el.getAttribute("data-lang");
+        if (translations[lang][key]) {
+            el.textContent = translations[lang][key];
+        }
+    });
+
+    // 更新 "关于 satx" 的链接，确保带上 ?lang= 参数
+    const aboutLink = document.getElementById("about-link");
+    if (aboutLink) {
+        aboutLink.href = `https://bai13567.github.io/satx.github.io/index.html?lang=${lang}`;
+    }
+}
+    
     function syncLanguage() {
         let language = localStorage.getItem("language");
 
