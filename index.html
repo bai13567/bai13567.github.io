@@ -222,9 +222,7 @@ text-decoration:underline;
     </div>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            let language = localStorage.getItem("language") || "zh";
-
+        function applyLanguage(lang) {
             const translations = {
                 "en": {
                     "home-title": "Welcome to the Bitcong Community!",
@@ -233,8 +231,8 @@ text-decoration:underline;
                     "buy-satx": "Buy satx",
                     "qq-group": "Join QQ Group",
                     "about-satx": "About satx",
-                    "back-twitter": "Back to Twitter"
-                    "warning":"Beware of fake Bitcong BRC20 satx!"
+                    "back-twitter": "Back to Twitter",
+                    "warning": "Beware of fake Bitcong BRC20 satx!"
                 },
                 "zh": {
                     "home-title": "比特聪社区欢迎你的到来",
@@ -243,23 +241,28 @@ text-decoration:underline;
                     "buy-satx": "购买 satx",
                     "qq-group": "加入 QQ 群",
                     "about-satx": "关于比特聪 satx",
-                    "back-twitter": "回到推特"
-            "warning":"认准真正的比特聪 BRC20 的 satx，谨防仿盘"
+                    "back-twitter": "回到推特",
+                    "warning": "认准真正的比特聪 BRC20 的 satx，谨防仿盘"
                 }
             };
 
-            function applyLanguage(lang) {
-                document.querySelectorAll("[data-lang]").forEach(el => {
-                    const key = el.getAttribute("data-lang");
-                    if (translations[lang][key]) {
-                        el.textContent = translations[lang][key];
-                    }
-                });
-            }
+            document.querySelectorAll("[data-lang]").forEach(el => {
+                const key = el.getAttribute("data-lang");
+                if (translations[lang][key]) {
+                    el.textContent = translations[lang][key];
+                }
+            });
+        }
 
+        function syncLanguage() {
+            let language = localStorage.getItem("language") || "zh";
             applyLanguage(language);
-        });
+        }
+
+        document.addEventListener("DOMContentLoaded", syncLanguage);
+        window.addEventListener("storage", syncLanguage); // 监听 `localStorage` 变化，保证语言同步
     </script>
+
         
 
 
