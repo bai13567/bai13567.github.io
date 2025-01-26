@@ -58,14 +58,14 @@
     <div class="container">
         <h1 data-lang="settings-title">Setting</h1>
 
-        <label for="language-select" data-lang="choose-language">选择语言：</label>
+        <label for="language-select" data-lang="choose-language">Language：</label>
         <select id="language-select">
             <option value="zh">中文</option>
             <option value="en">English</option>
         </select>
 
-        <p data-lang="current-language">当前语言: <span id="current-language-text">中文</span></p>
-
+        <p><strong data-lang="current-language">Current Language:</strong> <span id="current-language-text"></span></p>
+        
         <a href="index.html" class="button" data-lang="back-home">返回首页</a>
     </div>
 
@@ -77,13 +77,13 @@
             const translations = {
                 "en": {
                     "settings-title": "Setting",
-                    "choose-language": "Choose Language:",
+                    "choose-language": "Language:",
                     "current-language": "Current Language:",
                     "back-home": "Back to Home"
                 },
                 "zh": {
                     "settings-title": "Setting",
-                    "choose-language": "选择语言：",
+                    "choose-language": "Language：",
                     "current-language": "当前语言:",
                     "back-home": "返回首页"
                 }
